@@ -1,0 +1,18 @@
+server:
+  port: 5555
+   
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+     defaultZone: https://eureka-server-homemanager.herokuapp.com/eureka
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "routes"
+        
+#inclui no actuator uma rota para listar os endpoints que foram encontrados no eureka
